@@ -28,9 +28,9 @@ Aplikasi untuk otomatisasi deploy dan transfer token di jaringan EVM (Ethereum V
     │   └── TokenTransferService.js  
     ├── utils/
     │   ├── displayHeader.js        
-    │   └── walletmanager.js       
+    │   └── WalletManager.js       
     ├── tokenApp.js  
-    └── tokencli.js
+    └── TokenCLI.js
 ```
 
 ## Instalasi
