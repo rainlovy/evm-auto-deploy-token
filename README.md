@@ -1,4 +1,4 @@
-# Auto Transfer EVM
+# Auto Deploy dan Transfer EVM
 
 Aplikasi untuk otomatisasi deploy dan transfer token di jaringan EVM (Ethereum Virtual Machine).
 
