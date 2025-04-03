@@ -12,6 +12,7 @@ function displayHeader() {
             ${colors.red(' ╚══╝╚══╝  ╚═╝ ╚═╝  ╚═══╝ ╚══════╝ ╚═╝  ╚═══╝ ╚═╝ ╚═╝')}  
 
             ${colors.bold('🔥 Join grup TG:')} ${colors.cyan.underline('@winsnip')}
+            ${colors.bold('🔥 Auto Deploy and transfer Token')}
   `.split('\n').map(line => line.padStart(50)).join('\n'));
 }
 

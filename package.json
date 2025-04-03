@@ -1,17 +1,30 @@
 {
-  "name": "winsnip-auto-trsf",
+  "name": "winsnip-auto-deploy",
   "version": "1.0.0",
-  "description": "Auto transfer system for EVM chains",
+  "description": "Auto Deploy and Transfer Token System for EVM chains",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/tokenApp.js",
+    "deploy": "hardhat run src/tokenApp.js",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "dev": "nodemon src/tokenApp.js"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
     "colors": "^1.4.0",
     "dotenv": "^16.3.1",
-    "ethers": "^6.13.5"
+    "ethers": "^6.13.5",
+    "figlet": "^1.8.0",
+    "gradient-string": "^3.0.0",
+    "commander": "^11.1.0"
   },
   "type": "module",
   "license": "MIT",
-  "author": "Winsnip"
+  "author": "Winsnip",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.19",
+    "nodemon": "^3.0.3"
+  }
 }

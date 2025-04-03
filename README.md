@@ -1,86 +1,69 @@
 # Auto Transfer EVM
 
-Application for automated transfers between wallets across various EVM (Ethereum Virtual Machine) chains.
+Aplikasi untuk otomatisasi deploy dan transfer token di jaringan EVM (Ethereum Virtual Machine).
 
-## Features
+## Fitur
 
-- Support for multiple EVM chains
-- Wallet management using private keys
-- Automatic balance checking
-- Auto transfer with transaction confirmation
-- Real-time transaction status monitoring
-- Batch transfers with random or fixed amounts
-- Generate multiple wallets with automatic transfer
+- Deploy smart contract token
+- Transfer token ke multiple wallet
+- Manajemen wallet dan private key
+- Dukungan untuk berbagai chain EVM
+- Command line interface yang mudah digunakan
 
-## Project Structure
+## Struktur Proyek
 
 ```
 ├── config/
-│   ├── chains.js    # EVM chain configuration
-│   ├── index.js     # Configuration exports
-│   └── wallet.js    # Wallet configuration
+│   ├── chains.js    
+│   ├── index.js    
+│   └── gas.json    
+├── contracts/
+│   └── Token.sol    
 ├── data/
-│   ├── .env         # Environment variables
-│   └── wallet.txt   # Wallet data
+│   ├── deployments/
+│   └── wallet.txt  
 └── src/
-    ├── CLI.js           # Command line interface
-    ├── TransferService.js    # Transfer service
-    ├── WalletManager.js      # Wallet management
-    └── index.js        # Application entry point
+    ├── services/
+    │   ├── TokenDeployService.js    
+    │   └── TokenTransferService.js  
+    ├── utils/
+    │   ├── displayHeader.js        
+    │   └── walletmanager.js       
+    ├── tokenApp.js  
+    └── tokencli.js
 ```
 
-## Installation
+## Instalasi
 
-1. Clone this repository
+1. Clone repository ini
 2. Install dependencies:
 ```bash
 npm install
 ```
-3. Copy `.env.example` to `.env` and fill in the configuration:
-```env
-# Main wallet private key
-WALLET_PRIVATE_KEY="your-private-key-here"
-
-# RPC node (optional)
-RPC_URL="your-rpc-url" 
+```bash
+npx hardhat compile
 ```
+## Penggunaan
 
-## Configuration
 
-### Chain
-Edit `config/chains.js` to add or modify chains:
-```javascript
-export const chains = {
-  bsc: {
-    name: "BSC",
-    chainId: 56,
-    rpc: "https://bsc-dataseed.binance.org"
-  }
-  // Add other chains here
-}
-```
-
-### Wallet
-Wallet data is stored in `data/wallet.txt` with the format:
-```
-privateKey1
-privateKey2
-```
-
-## Usage
-
-### Manual Transfer
+### RUN
 ```bash
 npm start
 ```
-Follow the interactive menu to:
-- Select chain
-- Choose source and destination wallets
-- Enter transfer amount
-- Confirm transaction
+
+
+## Konfigurasi
+
+1. Input PK
+2. Sesuaikan konfigurasi chain di `config/chains.js`
+3. Atur parameter gas di `config/gas.json`
+
+## Kontribusi
+
+Kontribusi selalu diterima. Silakan buat pull request untuk perbaikan atau penambahan fitur.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail.
 
 Copyright © 2025 Winsnip
