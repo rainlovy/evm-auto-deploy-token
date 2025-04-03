@@ -1,0 +1,17 @@
+{
+  "name": "winsnip-auto-trsf",
+  "version": "1.0.0",
+  "description": "Auto transfer system for EVM chains",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.13.5"
+  },
+  "type": "module",
+  "license": "MIT",
+  "author": "Winsnip"
+}
